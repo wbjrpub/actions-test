@@ -35,6 +35,8 @@ jobs:
           sudo useradd -u 501 -g myuser myuser
           sudo chown -R myuser:myuser .
           ls -ld ~/
+          echo Making directory accessible
+          sudo chmod o+x . .. ../.. ../../..
 
       - name: test that sudo mkdir works
         shell: bash
